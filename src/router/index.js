@@ -4,8 +4,7 @@ import { useMenuStore } from '@/stores/menu'
 const menuStore = useMenuStore(pinia)
 const { setMenuList } = menuStore
 const isDev = import.meta.env.MODE === 'development'
-const devRoutes = await import('./devRoutes.js').then((module) => module.default);
-const prodRoutes = await import('./prodRoutes.js').then((module) => module.default);
+const routes = await import('./routes.js').then((module) => module.default);
 
 // 开发环境扁平化路由
 const flattenRoutes = (routes, result = []) => {
@@ -19,10 +18,10 @@ const flattenRoutes = (routes, result = []) => {
   });
   return result;
 };
-const flattenDevRoutes = flattenRoutes(devRoutes);
+const flattenDevRoutes = flattenRoutes(routes);
 const router = createRouter({
   history: createWebHashHistory(),
-  routes: isDev ? flattenDevRoutes : prodRoutes,
+  routes: flattenDevRoutes,
 })
-setMenuList(isDev ? devRoutes : prodRoutes)
+setMenuList(isDev ? routes : flattenDevRoutes)
 export default router

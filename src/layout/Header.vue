@@ -20,11 +20,11 @@ const toggleCollapse = () => {
     <div class="logo-section">
       <div class="logo flex-row-vcenter">
         <div class="logoLeft" :class="[isCollapse ? 'isCollapse' : 'unCollapse']">
-          <h1 class="company-name">国家电网</h1>
+          <h1 class="company-name">标题</h1>
           <span v-if="!isCollapse" class="line-divider">|</span>
           <EpFold class="collapse-icon" @click="toggleCollapse" />
         </div>
-        <h2 class="system-title">全业务工单</h2>
+        <h2 class="system-title">全yw工单</h2>
       </div>
     </div>
 
