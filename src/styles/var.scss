@@ -1,0 +1,126 @@
+/* 颜色相关根样式 定义变量 项目所有样式均需适应此文件 */
+$color-primary: #009b83; /*主色调 ，用于需要强调等文字、按钮和图标*/
+$color-primary-fuzhu: #33af9c; /*悬停状态 比主色弱*/
+$color-primary-hover: #33af9c; /*悬停状态 比主色弱*/
+$color-primary-click: #028671; /*点击颜色 比主色调加重*/
+$color-primary-light-9: #f5fdfc; /* 主色调 90% 透明度 */
+$color-warning: #fc8e32; /*警告*/
+$color-error: #fe3333; /*错误、违章、问题*/
+$color-blue: #15acfc; /*错误、违章、问题*/
+
+$color-gray: #f6f6f6; /*辅助色 灰色1*/
+$color-gray2: #eee; /*辅助色 灰色2*/
+$color-gray3: #ddd; /*辅助色 灰色3*/
+$color-gray4: #ccc; /*辅助色 灰色4*/
+
+// 字体颜色相关：
+$font-color-dark: #426170; /* 字体重色，用于重要级文字信息，标题文字信息 */
+$font-color-main: #2a2b2f; /* 字体主色，用于重要级文字信息，主要文字信息 */
+$font-color-middle: #7b919b; /* 字体中灰色，用于普通级段落信息，引导词，单位等不太重要等文字 */
+$font-color-light: #99a09e; /* 字体浅灰色，用于输入框内提示性文字，辅助文字  */
+
+//线条颜色
+$border-color: #e7ecee; /*边框色，用户输入框，分割线等线条颜色*/
+$card-color: #f5f7f7; /*卡片背景色*/
+
+// 按钮边框
+$border-color-lighter: #dee0e6; /* 按钮浅色边框 */
+$border-color-primary: #009b83; /* 按钮边框色 */
+
+/* 字体大小相关 */
+$font-big: 18px; /*卡片标题重要文字*/
+$font-middle: 16px; /*二级标题 顶部导航标题*/
+$font-base: 14px; /*正文使用*/
+$font-sm: 12px; /*辅助性文字使用，如备注性信息*/
+$font-xs: 10px; /*极小文字，次要信息*/
+/* 间距相关 */
+$spacing-base: 20px; /* 基本间距*/
+$spacing-md: 10px; /*卡片间间距使用*/
+$spacing-sm: 8px; /*间距备用，暂无使用*/
+$spacing-normal: 16px; /* 大部分编辑页面间距 */
+/* 圆角圆度 */
+$border-radio: 4px; /* 兼容之前的倒角  */
+$border-radio-lg: 12px; /* 页面级 工作台页面卡片圆角  */
+$border-radio-md: 4px; /* 卡片 弹框 下拉框 输入框 按钮  */
+$border-radio-sm: 2px; /* 复选框 较小元素 */
+
+/* 表单高度 */
+$form-item-height-lg: 40px; /* 表单大高度 */
+$form-item-height-md: 32px; /* 表单中等高度 */
+$form-item-height-sm: 28px; /* 表单小高度 */
+/* 输入框、选择器高度 */
+$input-height-md: 32px; /* 输入框中等高度 */
+$input-height-sm: 28px; /* 输入框小高度 */
+
+/* 渐变色 */
+//容器浅色渐变
+$gradient-sky-light-start: #e6fcf3;
+$gradient-sky-light-end: #f5f7f7;
+$gradient-sky-light-horizontal: linear-gradient(90deg, #e6fcf3 0%, #f5f7f7 100%);
+$gradient-sky-light-vertical: linear-gradient(180deg, #e6fcf3 0%, #f5f7f7 100%);
+
+// 深绿渐变
+$gradient-green-dark-start: #029c84;
+$gradient-green-dark-end: #54c8b6;
+$gradient-green-dark-horizontal: linear-gradient(
+  90deg,
+  $gradient-green-dark-start 0%,
+  $gradient-green-dark-end 100%
+);
+$gradient-green-dark-vertical: linear-gradient(
+  180deg,
+  $gradient-green-dark-start 0%,
+  $gradient-green-dark-end 100%
+);
+
+// 浅绿渐变
+$gradient-green-light-start: #00c4d9;
+$gradient-green-light-end: rgba(1, 196, 217, 0.7);
+$gradient-green-light-horizontal: linear-gradient(
+  90deg,
+  $gradient-green-light-start 0%,
+  $gradient-green-light-end 100%
+);
+$gradient-green-light-vertical: linear-gradient(
+  180deg,
+  $gradient-green-light-start 0%,
+  $gradient-green-light-end 100%
+);
+
+// 蓝色渐变
+$gradient-blue-start: #039dee;
+$gradient-blue-end: #78d0ff;
+$gradient-blue-horizontal: linear-gradient(90deg, $gradient-blue-start 0%, $gradient-blue-end 100%);
+$gradient-blue-vertical: linear-gradient(180deg, $gradient-blue-start 0%, $gradient-blue-end 100%);
+
+// 黄色渐变
+$gradient-yellow-start: #fc8e32;
+$gradient-yellow-end: rgba(252, 142, 50, 0.702);
+$gradient-yellow-horizontal: linear-gradient(
+  90deg,
+  $gradient-yellow-start 0%,
+  $gradient-yellow-end 100%
+);
+$gradient-yellow-vertical: linear-gradient(
+  180deg,
+  $gradient-yellow-start 0%,
+  $gradient-yellow-end 100%
+);
+
+/* elementui组件渐变色 */
+$el-gradient-green-horizontal: linear-gradient(
+  90deg,
+  #f3fcfa 0%,
+  #ffffff 100%
+); /* 深绿渐变色 element 组件背景色 */
+$el-gradient-green-vertical: linear-gradient(
+  180deg,
+  #f3fcfa 0%,
+  #ffffff 100%
+); /* 浅绿渐变色 element 组件背景色 */
+
+/* 盒子阴影 */
+$box-shadow: 0px 4px 10px 0px #e8f4f3; /* 卡片、弹框等盒子阴影 */
+$el-box-shadow: 0px 6px 12px 0px rgba(0, 62, 53, 0.12); /* element 组件盒子阴影 */
+
+$transition-base: 0.3s ease-in-out; /* 基础过渡时间 */

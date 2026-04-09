@@ -1,0 +1,122 @@
+@use './var.scss' as *;
+//字体
+
+@mixin font-family(
+  $value: (
+    'Microsoft YaHei',
+    Tahoma,
+    Arial,
+    sans-serif,
+  )
+) {
+  font-family: $value;
+}
+
+// 文字溢出隐藏显示...
+
+@mixin text-overflow($line: 1) {
+  @if $line==1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    /*! autoprefixer: off */
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+  }
+}
+
+//border
+@mixin border($color: $border-color, $width: $border-width) {
+  border: $width solid $color;
+}
+@mixin border-dir($i, $width: $border-width, $color: $border-color) {
+  border-#{$i}: $width solid $color;
+}
+// border-radius
+@mixin radius($radius: $radius-base, $overflow: hidden) {
+  border-radius: $radius;
+  overflow: $overflow;
+}
+//间距
+@mixin padding-col($n: $size-base, $sizeKey: none) {
+  @if $sizeKey == 'zero' {
+    padding-top: $n !important;
+    padding-bottom: $n !important;
+  } @else {
+    padding-top: $n;
+    padding-bottom: $n;
+  }
+}
+@mixin padding-row($n: $size-base, $sizeKey: none) {
+  @if $sizeKey == 'zero' {
+    padding-left: $n !important;
+    padding-right: $n !important;
+  } @else {
+    padding-left: $n;
+    padding-right: $n;
+  }
+}
+@mixin margin-col($n: $size-base, $sizeKey: none) {
+  @if $sizeKey == 'zero' {
+    margin-top: $n !important;
+    margin-bottom: $n !important;
+  } @else {
+    margin-top: $n;
+    margin-bottom: $n;
+  }
+}
+@mixin margin-row($n: $size-base, $sizeKey: none) {
+  @if $sizeKey == 'zero' {
+    margin-left: $n !important;
+    margin-right: $n !important;
+  } @else {
+    margin-left: $n;
+    margin-right: $n;
+  }
+}
+/* 按钮前置样式 */
+@mixin el-btn-new {
+  min-width: 76px;
+  height: 32px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  border-radius: $border-radio-md;
+  font-size: $font-base;
+  .iconfont {
+    display: inline-block;
+    font-size: $font-sm;
+    margin-right: 2px;
+  }
+  span {
+    font-size: $font-base;
+    img {
+      width: 12px;
+      height: 12px;
+      margin-right: 4px;
+    }
+  }
+}
+/* 深色按钮 */
+@mixin primary-btn {
+  color: #fff;
+  background-color: $color-primary;
+  border: none;
+  &:hover {
+    background-color: $color-primary-hover;
+  }
+}
+/* 浅色按钮 */
+@mixin light-btn {
+  padding: 0 16px;
+  color: $font-color-main;
+  border: 1px solid $border-color-lighter;
+  &:hover {
+    border-color: $color-primary-hover;
+    background: #fff;
+  }
+}

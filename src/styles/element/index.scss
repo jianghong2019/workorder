@@ -1,0 +1,110 @@
+@use '../var.scss' as *;
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  // 组件通用尺寸
+  $common-component-size: (
+      'large': $form-item-height-lg,
+      'default': $form-item-height-md,
+      'small': $form-item-height-sm,
+      'mini': 20px
+    ),
+  // 输入框内边距
+  $input-padding-horizontal: ('large': 12px, 'default': 10px, 'small': 6px, 'mini': 4px),
+  $colors: (
+    'primary': (
+      'base': $color-primary,
+    ),
+    'success': (
+      'base': $color-primary,
+    ),
+    'warning': (
+      'base': $color-warning,
+    ),
+    'danger': (
+      'base': $color-error,
+    ),
+    'error': (
+      'base': $color-error,
+    ),
+    'info': (
+      'base': #909399,
+    )
+  ),
+  // 背景色
+  $bg-color: (
+      // 对应 --el-bg-color
+      '': #ffffff,
+      // 对应 --el-bg-color-page
+      'page': #f2f3f5,
+      // 对应 --el-bg-color-overlay
+      'overlay': $el-gradient-green-vertical
+    ),
+  // 文字颜色
+  $text-color: (
+      'primary': $font-color-dark,
+      'regular': $font-color-main,
+      'secondary': $font-color-middle,
+      'placeholder': $font-color-light
+    ),
+  $font-size: (
+    'extra-large': 20px,
+    'large': $font-big,
+    'medium': $font-middle,
+    'base': $font-base,
+    'small': $font-sm,
+    'extra-small': $font-xs
+  ),
+  $border-radius: (
+    'base': $border-radio-md,
+    'small': $border-radio-sm,
+    'round': $border-radio-lg,
+    'circle': 100%
+  ),
+  $border-color: ('': $border-color, 'light': #e7ecee, 'lighter': #ebeef5, 'extra-light': #f2f6fc),
+  $input: (
+    // 边框
+    'border-color': $border-color,
+    // 默认边框色
+    'hover-border-color': $color-primary-hover,
+    // hover 时边框色
+    'focus-border-color': $color-primary,
+    // focus 时边框色
+    // 边框粗细
+    'border-width': 1px,
+    // 阴影效果
+    'focus-shadow': 0 0 0 2px rgba($color-primary, 0.5),
+    // 高度
+    'font-size': $font-base,
+
+    // 字体大小
+    // 背景色
+    'bg-color': #ffffff,
+    // 背景色
+    'hover-bg-color': #ffffff,
+    // hover 背景色
+    'focus-bg-color': #ffffff,
+    // focus 背景色
+    'disabled-bg-color': #f5f7fa,
+
+    // 禁用背景色
+    // 文字颜色
+    'text-color': $font-color-main,
+    // 文字颜色
+    'placeholder-color': $font-color-light,
+
+    // placeholder 颜色
+    // icon 颜色
+    'icon-color': #c0c4cc,
+    // icon hover 颜色
+    'icon-hover-color': #909399,
+    // 后缀 icon 颜色
+    'suffix-icon-color': #c0c4cc,
+    // 前缀 icon 颜色
+    'prefix-icon-color': #c0c4cc,
+
+    // 禁用状态
+    // 禁用边框色
+    'disabled-border-color': #e4e7ed,
+    'disabled-text-color': #c0c4cc
+  )
+);
+@use 'element-plus/theme-chalk/src/index.scss' as *;
