@@ -1,13 +1,21 @@
 export default [
   {
+    path: '/visual',
     title: 'FJGK',
     isShow: true,
+    meta: {
+      keepAlive: true,
+    },
+    component: () => import('@/pages/visual/index.vue'),
   },
   {
+    path: '/wwpj',
     title: 'WWPJ',
     isShow: true,
-    children: [
-    ],
+    meta: {
+      keepAlive: true,
+    },
+    component: () => import('@/pages/wwpj/index.vue'),
   },
   {
     path: '/workOrderHangUp',

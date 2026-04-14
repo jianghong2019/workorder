@@ -50,10 +50,12 @@ declare module 'vue' {
     IconEpSetting: typeof import('~icons/ep/setting')['default']
     IconEpUnfold: typeof import('~icons/ep/unfold')['default']
     IconTest: typeof import('./src/components/IconTest.vue')['default']
+    MapToolbarExample: typeof import('./src/components/common/MapToolbarExample.vue')['default']
     NullData: typeof import('./src/components/common/nullData.vue')['default']
     OrgTree: typeof import('./src/components/common/OrgTree.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SgMap: typeof import('./src/components/common/SgMap.vue')['default']
   }
   export interface GlobalDirectives {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']
@@ -100,8 +102,10 @@ declare global {
   const IconEpSetting: typeof import('~icons/ep/setting')['default']
   const IconEpUnfold: typeof import('~icons/ep/unfold')['default']
   const IconTest: typeof import('./src/components/IconTest.vue')['default']
+  const MapToolbarExample: typeof import('./src/components/common/MapToolbarExample.vue')['default']
   const NullData: typeof import('./src/components/common/nullData.vue')['default']
   const OrgTree: typeof import('./src/components/common/OrgTree.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
+  const SgMap: typeof import('./src/components/common/SgMap.vue')['default']
 }
