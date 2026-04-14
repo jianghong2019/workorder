@@ -31,9 +31,9 @@ const toggleCollapse = () => {
     <!-- 右侧用户信息区域 -->
     <div class="user-section flex-row-vcenter">
       <div class="user-info flex-row-vcenter">
-        <img src="../assets/img/icon_user.png" class="user-avatar" />
+        <div class="user-avatar">{{ userName.charAt(0) }}</div>
         <span class="user-name">{{ userName }}</span>
-        <img src="../assets/img/icon_xiala.png" class="dropdown-icon" />
+        <span class="dropdown-icon">▼</span>
       </div>
     </div>
   </div>
@@ -139,7 +139,13 @@ const toggleCollapse = () => {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  object-fit: cover;
+  background-color: #1890ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .user-name {
@@ -149,14 +155,15 @@ const toggleCollapse = () => {
 }
 
 .dropdown-icon {
-  width: 12px;
-  height: 12px;
+  font-size: 10px;
   cursor: pointer;
-  color: #999999;
+  color: #fff;
   transition: color 0.3s ease;
+  opacity: 0.8;
 
   &:hover {
     color: #1890ff;
+    opacity: 1;
   }
 }
 
