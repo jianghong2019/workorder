@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/workorder/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>营销现场作业平台</title>
+  <script src="/workorder/js/common.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/workorder/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/workorder/js/jquery.jqprint-0.3.js" type="text/javascript" charset="utf-8"></script>
+  <!-- 加密相关js  开始-->
+  <script src="/workorder/js/2n.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/workorder/js/base.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/workorder/js/encryptUtil.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/workorder/js/jquery.contextmenu.r2.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/workorder/js/sm4CBCn.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/workorder/js/util.js" type="text/javascript" charset="utf-8"></script>
+  <!-- 加密相关js结束  -->
+  <script type="text/javascript" charset="utf-8">
+    var xmlh;
+    // localStorage.removeItem('isNeedEncrypt')
+    // 生产环境会从portal获取 后存在浏览器缓存 其他微应用无需再重新获取
+    if (!localStorage.getItem("isNeedEncrypt")) {
+      if (window.XMLHttpRequest) {
+        //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xmlh = new XMLHttpRequest();
+      } else {
+        // IE6, IE5 浏览器执行代码
+        xmlh = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlh.open("GET", '/am/rest/validate/getNeedEncrypt', false)
+      xmlh.onreadystatechange = function () {
+        if (xmlh.readyState == 4 && xmlh.status == 200) {
+          var resData = JSON.parse(xmlh.responseText);
+          console.log("加密开关", resData.resultValue)
+          localStorage.setItem('isNeedEncrypt', resData.resultValue)
+        }
+      }
+      xmlh.send()
+    }
+
+  </script>
+  <script type="module" crossorigin src="/workorder/assets/index-nLsKZQ2x.js"></script>
+  <link rel="modulepreload" crossorigin href="/workorder/assets/preload-helper-DmWKrfMg.js">
+  <link rel="stylesheet" crossorigin href="/workorder/assets/index-w6WsGVsU.css">
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+
+</html>
