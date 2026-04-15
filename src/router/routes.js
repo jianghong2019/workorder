@@ -1,5 +1,9 @@
 export default [
   {
+    path: '/',
+    redirect: '/visual',
+  },
+  {
     path: '/visual',
     title: 'FJGK',
     isShow: true,
