@@ -12,6 +12,10 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 // https://vite.dev/config/
 export default defineConfig({
   base: '/workorder/',
+  transformIndexHtml(html) {
+    return html.replace(/src="\/js\//g, 'src="/workorder/js/')
+               .replace(/href="\/favicon.ico/g, 'href="/workorder/favicon.ico')
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
