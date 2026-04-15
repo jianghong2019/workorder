@@ -1,17 +1,5 @@
 <template>
   <div class="visual-container">
-    <!-- 方式一：工具栏作为 SgMap 的子组件（推荐） -->
-    <!-- <SgMap
-      :mapconfig="mapConfig"
-      container-id="sgMap"
-      @load="handleMapLoad"
-    >
-      <div class="toolbar-wrapper">
-        <MapToolbarExample />
-      </div>
-    </SgMap> -->
-
-    <!-- 方式二：父组件在上层 provide，所有子组件都能获取 -->
     <div class="toolbar-wrapper">
       <MapToolbarExample />
     </div>
@@ -31,10 +19,13 @@ const mapInstance = shallowRef(null)
 const isLoaded = ref(false)
 
 // 在上层 provide 地图实例，这样所有子组件都能通过 useMap() 获取
-provideMap({
-  mapInstance,
-  isLoaded,
-},'normal-map')
+provideMap(
+  {
+    mapInstance,
+    isLoaded,
+  },
+  'normal-map',
+)
 
 const mapConfig = {
   srcSdk: 'https://map.sgcc.com.cn/maps?v=3.0.0',
